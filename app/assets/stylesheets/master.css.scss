@@ -11,8 +11,16 @@ font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstre
 
 }
 
+.navbar-inverse .navbar-brand {
+  font-family: 'bitstream_vera_sans_monoroman', monospace;
+  font-size: 2em;
+  letter-spacing: 5px;
+  color: #fff;
+}
+
 .navbar.navbar-inverse {
   margin: 0 10px 0;
+  background: url('/assets/micro_carbon_@2X.png');
   border-radius: 0 0 15px 15px;
   box-shadow: 3px 3px 6px #493d60;
 }
@@ -20,9 +28,9 @@ font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstre
 .booyah-box {
   margin-top: 20px;
   padding: 15px;
-  background: -webkit-radial-gradient(left top, #fff, #e6e1f2);
-  background: -o-radial-gradient(left top, #fff, #e6e1f2);
-  background: -moz-radial-gradient(left top, #fff, #e6e1f2);
+  background: -webkit-radial-gradient(left top, #fff, #d4cee0);
+  background: -o-radial-gradient(left top, #fff, #d4cee0);
+  background: -moz-radial-gradient(left top, #fff, #d4cee0);
   border: 2.5px dotted #000;
 }
 

@@ -1,0 +1,14 @@
+<div class="booyah-box heading col-xs-10 col-xs-offset-1">
+	<h1>Add a fave place</h1>
+</div>
+<div class="col-xs-10 col-xs-offset-1 form">
+	<%= simple_form_for @place do |f| %>
+		<%= f.input :name %>
+		<br />
+		<%= f.input :address %>
+		<br />
+		<%= f.input :description, :placeholder => 'Is the food fantastic? The vibe vivacious? Let us know!' %>
+		<br />
+		<%= f.submit 'Add it!', :class => 'btn btn-primary btn-lg text-right' %>
+	<% end %>
+</div>

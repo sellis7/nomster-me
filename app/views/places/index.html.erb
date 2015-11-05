@@ -1,3 +1,15 @@
+<div class="pagination col-xs-12 text-center">
+
+	<%= paginate @places, :window => 1 %>
+</div>
+
+<nav> <!-- I FIGURED IT OUT!!! WOOT! -->
+  <ul class="pager">
+    <li class="previous"><%= link_to_previous_page @places, '<<' %></li>
+    <li class="next"><%= link_to_next_page @places, '>>' %></li>
+  </ul>
+</nav>
+
 <% @places.each do |place| %>
 	<div class="booyah-box col-xs-10 col-xs-offset-1">
 		<h1 class="location"><%= place.name %></h1>

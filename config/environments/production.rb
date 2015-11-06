@@ -1,6 +1,9 @@
 Nomster::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Ensure you have defined default url options in your environments files - Heroku
+  config.action_mailer.default_url_options = { :host => 'sellis-nomster.herokuapp.com' }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

@@ -39,6 +39,9 @@ gem 'kaminari'
 # Install Simple Form 3.1
 gem 'simple_form'
 
+# Integrate Devise for user authentication, using older version
+gem 'devise', '>= 3.2.4'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

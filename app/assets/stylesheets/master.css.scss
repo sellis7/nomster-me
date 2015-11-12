@@ -50,5 +50,12 @@ font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstre
 
 
 .btn-primary {
-  background-color: #741efe;
+  background-color: #63c;
+  border-color: #825ccf;
 }
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    color: #fff;
+    background-color: #63c;
+    border-color: #825ccf;
+  }

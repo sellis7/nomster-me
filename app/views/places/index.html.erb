@@ -5,8 +5,8 @@
 
 <nav> <!-- I FIGURED IT OUT!!! WOOT! -->
   <ul class="pager">
-    <li class="previous"><%= link_to_previous_page @places, '<<' %></li>
-    <li class="next"><%= link_to_next_page @places, '>>' %></li>
+    <li class="previous"><%= link_to_previous_page @places, '<' %></li>
+    <li class="next"><%= link_to_next_page @places, '>' %></li>
   </ul>
 </nav>
 
@@ -17,5 +17,9 @@
 		<br />
 		<p><%= place.description %></p>
 		<br />
+
+		<% if place.user.present? %>
+			<small><%= place.user.email %></small>
+		<% end %>
 	</div>
 <% end %>

@@ -18,9 +18,13 @@ class PlacesController < ApplicationController
 		end
 	end
 
-	def show
+	def show ## I think this will be where I need to update for Geocoder
 		@place = Place.find(params[:id])
 	end
+
+	# or with a method
+  # geocoded_by :full_address
+	# full_address is a method which take some model's attributes to get a formatted address for example
 
 	def edit
 		@place = Place.find(params[:id])

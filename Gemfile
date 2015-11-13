@@ -42,6 +42,12 @@ gem 'simple_form'
 # Integrate Devise for user authentication, using older version
 gem 'devise', '>= 3.2.4'
 
+# Geocoder install
+gem 'geocoder'
+
+# Utilize Figaro app configuration
+gem 'figaro', '>= 1.0.0'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

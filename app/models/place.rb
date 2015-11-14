@@ -1,5 +1,6 @@
 class Place < ActiveRecord::Base
 	belongs_to :user
+	has_many :comments
 
 	geocoded_by :address # this might need to be done by a custom method
 	after_validation :geocode

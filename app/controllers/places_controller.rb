@@ -20,6 +20,7 @@ class PlacesController < ApplicationController
 
 	def show ## I think this will be where I need to update for Geocoder
 		@place = Place.find(params[:id])
+		@comment = Comment.new
 	end
 
 	# or with a method

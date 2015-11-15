@@ -1,6 +1,18 @@
 Nomster::Application.configure do
-  # Ensure you have defined default url options in your environments files - Vagrant
-  config.action_mailer.default_url_options = { :host => 'localhost:3030' }
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "example.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV['GMAIL_ADDRESS'],
+    password: ENV['GMAIL_PASSWORD']
+  }
+
+  # Ensure you have defined default url options in your environments files - native
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Settings specified here will take precedence over those in config/application.rb.
 

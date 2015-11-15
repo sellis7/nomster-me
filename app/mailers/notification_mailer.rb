@@ -7,5 +7,6 @@ class NotificationMailer < ActionMailer::Base
     mail(to: 'webdev.throwaway@gmail.com',
       subject: "A comment was added to #{@place.name}")
     ## Would be mail(to: @place_owner.email, ...) if owner of comment to receive msg
+    ## Currently mails to personal acct
   end
 end

@@ -1,6 +1,17 @@
 Nomster::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Configure Heroku MailGun for production environment
+  ActionMailer::Base.smtp_settings = {
+    :port => ENV['MAILGUN_SMTP_PORT'],
+    :address => ENV['MAILGUN_SMTP_SERVER'],
+    :user_name => ENV['MAILGUN_SMTP_LOGIN'],
+    :password => ENV['MAILGUN_SMTP_PASSWORD'],
+    :domain => 'https://sellis-nomster.herokuapp.com/',
+    :authentication => :plain,
+  }
+  ActionMailer::Base.delivery_method = :smtp
+
   # Ensure you have defined default url options in your environments files - Heroku
   config.action_mailer.default_url_options = { :host => 'sellis-nomster.herokuapp.com' }
 

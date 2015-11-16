@@ -1,15 +1,3 @@
-<div class="pagination col-xs-12 text-center">
-
-	<%= paginate @places, :window => 1 %>
-</div>
-
-<nav> <!-- I FIGURED IT OUT!!! WOOT! -->
-  <ul class="pager">
-    <li class="previous"><%= link_to_previous_page @places, '<' %></li>
-    <li class="next"><%= link_to_next_page @places, '>' %></li>
-  </ul>
-</nav>
-
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -21,18 +9,17 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <%= image_tag 'slider1.jpg' %>
+      <%= image_tag 'slider1.jpg', :class= => 'img-responsive' %>
       <div class="carousel-caption">
         Seeking nightlife activity while in Baltimore?
       </div>
     </div>
     <div class="item">
-      <%= image_tag 'slider2.jpg' %>
+      <%= image_tag 'slider2.jpg', :class= => 'img-responsive' %>
       <div class="carousel-caption">
         Exploring Philadelphia for the day?
       </div>
     </div>
-    ...
   </div>
 
   <!-- Controls -->
@@ -72,3 +59,15 @@
 
 	</div>
 <% end %>
+
+<div class="pagination col-xs-12 text-center">
+
+	<%= paginate @places, :window => 1 %>
+</div>
+
+<nav> <!-- I FIGURED IT OUT!!! WOOT! -->
+  <ul class="pager">
+    <li class="previous"><%= link_to_previous_page @places, '<' %></li>
+    <li class="next"><%= link_to_next_page @places, '>' %></li>
+  </ul>
+</nav>

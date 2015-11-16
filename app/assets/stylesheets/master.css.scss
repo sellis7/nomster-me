@@ -68,6 +68,30 @@ font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstre
   border-color: #825ccf;
 }
 
+/* Picture Carousel */
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  margin: 0 auto;
+  height: 480px;
+  width: 90%;
+}
+
+.carousel-control {
+  margin: 0 5%;
+}
+
+.carousel-caption {
+  padding-top: 2px;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  text-shadow: rgba(16, 3, 32, 0.95) 2px 2px;
+  background-color: rgba(0,0,0,0.5);
+  width: 90%;
+  left: 5%;
+}
+
+/* Kaminari pagination */
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
     color: #fff;
     background-color: #63c;

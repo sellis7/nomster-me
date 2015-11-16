@@ -60,14 +60,9 @@
 	</div>
 <% end %>
 
+<!-- I FIGURED IT OUT!!! WOOT! PAGINATION! -->
 <div class="pagination col-xs-12 text-center">
-
-	<%= paginate @places, :window => 1 %>
+	<nav>
+		<%= paginate @places, :window => 1 %>
+	</nav>
 </div>
-
-<nav> <!-- I FIGURED IT OUT!!! WOOT! -->
-  <ul class="pager">
-    <li class="previous"><%= link_to_previous_page @places, '<' %></li>
-    <li class="next"><%= link_to_next_page @places, '>' %></li>
-  </ul>
-</nav>

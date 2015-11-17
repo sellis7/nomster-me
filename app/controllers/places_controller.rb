@@ -17,15 +17,12 @@ class PlacesController < ApplicationController
 			render :new, :status => :unprocessable_entity
 		end
 	end
-
-	def show ## I think this will be where I need to update for Geocoder
+	
+	## I think this will be where I need to set a new method for Geocoder(?)
+	def show
 		@place = Place.find(params[:id])
 		@comment = Comment.new
 	end
-
-	# or with a method
-  # geocoded_by :full_address
-	# full_address is a method which take some model's attributes to get a formatted address for example
 
 	def edit
 		@place = Place.find(params[:id])

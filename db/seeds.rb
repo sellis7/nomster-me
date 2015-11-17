@@ -1,3 +1,11 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create(name: 'Emanuel', city: cities.first)
+
 Place.create!([
   {name: "South Street", description: "A bit trendy now, but some remaining stores, restaurants, cafes, clubs & bars that still maintain a bit of the old bohemian/punk/alternative flavor that this locality used to be known for.", address: "South St from 33rd St to Front St, Philadelphia, PA"},
   {name: "St. Mark's Place", description: "Somewhat edgy strip to roam encompassing alternative & varied vendors, storefronts, restaurants & bars. It was still quite the cool area to wander for unique & eclectic things back in 2008!", address: "8th St from Sixth Ave to Avenue D, New York, NY"},

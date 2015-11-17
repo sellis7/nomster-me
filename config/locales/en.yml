@@ -25,5 +25,5 @@ en:
     pagination:
       previous: "&lt;"
       next: "&gt;"
-      first: "&laquo;"
-      last: "&raquo;"
+      first: "first page"
+      last: "last page"

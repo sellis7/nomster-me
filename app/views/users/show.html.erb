@@ -11,8 +11,8 @@
 	<div class="clear"></div>
 </div>
 
-<div class="col-xs-10 col-xs-offset-1">
-	<h1 class="text-left">My Comments</h1>
+<div class="col-xs-10 col-xs-offset-1 border">
+	<h1 class="purple_heading">My Comments</h1>
 	<% if @user.comments.present? %>
 		<% @user.comments.each do |comment| %>
 		<h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
@@ -23,7 +23,6 @@
 				<%= comment.message %>
 				<small><%= comment.user.email %></small>
 			</blockquote>
-			<%= comment.inspect %>
 		<% end %>
 		<% else %>
 			<h4>You haven't posted any comments yet</h4>
@@ -31,26 +30,25 @@
 </div>
 
 <div class="col-xs-10 col-xs-offset-1">
-	<h1 class="text-left">My Places</h1>
+	<h1 class="purple_heading">My Places</h1>
+	<br/ >
 	<% if @user.places.present? %>
 		<% @user.places.each do |place| %>
-			<h1 class="location"><%= link_to place.name, place_path(place) %></h1>
-			<i><%= place.address %></i>
-			<br />
-			<p class="about"><%= place.description %></p>
-			<br />
-
+			<div class="col-xs-12 booyah-box">
+				<h1 class="location"><%= link_to place.name, place_path(place) %></h1>
+				<i><%= place.address %></i>
+				<br />
+				<p class="about"><%= place.description %></p>
 				<% if place.comments.present? %>
-					<div class="col-xs-12">
 						<blockquote>
 							<% if place.comments.last.humanized_rating.present? %>
-								<b><%= place.comments.last.humanized_rating %></b> -
+								<b><%= place.comments.last.humanized_rating %></b> –
 							<% end %>
 							<%= place.comments.last.message %>
 							<small><%= place.comments.last.user.email %></small>
 						</blockquote>
-					</div>
 				<% end %>
+			</div>
 		<% end %>
 	<% else %>
 				<h4>You didn't post any locations</h4>

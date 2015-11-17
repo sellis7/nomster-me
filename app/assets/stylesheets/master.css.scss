@@ -123,11 +123,19 @@ html, body {
   height: 300px;
 }
 
+.purple_heading {
+  color: #63c;
+}
+
+.border {
+  border-bottom: 4px solid #000;
+}
+
 /* Comments display */
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
+  margin: 1.5em 1px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
@@ -141,4 +149,8 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
+}
+
+.profile_comment {
+  margin: 0 auto;
 }

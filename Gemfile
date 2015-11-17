@@ -48,6 +48,8 @@ gem 'geocoder'
 # Utilize Figaro app configuration
 gem 'figaro', '>= 1.0.0'
 
+# Install CarrierWave for image uploads
+gem 'carrierwave'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -6,7 +6,6 @@
 
 <% if @place.latitude.present? && @place.longitude.present? %>
     <script>
-
 			function initMap() {
 			  var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
@@ -21,7 +20,6 @@
 			    title: 'Hello World!'
 			  });
 			}
-
     </script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap">
@@ -52,7 +50,7 @@
 
 	  	<%= simple_form_for @comment, :url => place_comments_path(@place) do |f| %>
 	      <div class="modal-body">
-						<%= f. input :message %>
+						<%= f.input :message %>
 						<%= f.input :rating, :as => :select, :collection => Comment::RATINGS %>
 		  	</div>
 				<div class="modal-footer">
@@ -90,4 +88,13 @@
 		<% end %>
 <% else %>
 	<h4 class="col-xs-offset-1">No posted comments for this location</h4>
+<% end %>
+
+<%= simple_form_for @pic do |f| %>
+	<div>
+			<%= f.input :caption %>
+			<%= f.label :pic %>
+			<%= f.input :pic %>
+		<%= f.submit "Add image", :class => 'btn btn-primary' %>
+	</div>
 <% end %>

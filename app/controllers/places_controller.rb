@@ -17,11 +17,12 @@ class PlacesController < ApplicationController
 			render :new, :status => :unprocessable_entity
 		end
 	end
-	
+
 	## I think this will be where I need to set a new method for Geocoder(?)
 	def show
 		@place = Place.find(params[:id])
 		@comment = Comment.new
+		@pic = Pic.new
 	end
 
 	def edit

@@ -8,6 +8,6 @@ class PicsController < ApplicationController
 	private
 
 	def pic_params
-		params.require(:pic).permit(:picture)
+		params.require(:pic).permit(:caption, :picture, :place_id)
 	end
 end

@@ -51,6 +51,12 @@ gem 'figaro', '>= 1.0.0'
 # Install CarrierWave for image uploads
 gem 'carrierwave'
 
+# Enabling Fog for CarrierWave interaction with AmazonS3
+gem 'fog', '~> 1.3.1'
+
+# Install MiniMagick to run with ImageMagick
+gem 'mini_magick', '~> 4.3', '>= 4.3.6'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

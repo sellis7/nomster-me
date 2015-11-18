@@ -90,11 +90,19 @@
 	<h4 class="col-xs-offset-1">No posted comments for this location</h4>
 <% end %>
 
-<%= simple_form_for @pic do |f| %>
+<% if @place.pics.present? %>
+	<div>
+		<% @place.pics.each do |pic| %>
+				<%= image_tag pic.picture %>
+				<%= pic.caption %>
+		<% end %>
+	</div>
+<% end %>
+
+<%= simple_form_for @pic, :url => place_pics_path(@place) do |f| %>
 	<div>
 			<%= f.input :caption %>
-			<%= f.label :pic %>
-			<%= f.input :pic %>
+			<%= f.input :picture %>
 		<%= f.submit "Add image", :class => 'btn btn-primary' %>
 	</div>
 <% end %>

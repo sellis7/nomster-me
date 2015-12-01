@@ -57,6 +57,9 @@ gem 'fog', '~> 1.3.1'
 # Install MiniMagick to run with ImageMagick
 gem 'mini_magick', '~> 4.3', '>= 4.3.6'
 
+# For testing data
+gem 'factory_girl_rails', '~> 4.0'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

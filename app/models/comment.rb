@@ -15,6 +15,10 @@ class Comment < ActiveRecord::Base
 		RATINGS.invert[self.rating]
 	end
 
+	# def comment_has_humanized_rating
+	# 	RATINGS.invert[self.rating]
+	# end
+
 	def send_comment_email
 		NotificationMailer.comment_added(self).deliver
 	end

@@ -17,11 +17,12 @@
 		<% @user.comments.each do |comment| %>
 		<h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
 			<blockquote>
-				<% if comment.humanized_rating.present? %>
-					<b><%= comment.humanized_rating %></b> -
-				<% end %>
 				<%= comment.message %>
-				<small><%= comment.user.email %></small>
+				<br />
+				<% if comment.humanized_rating.present? %>
+					<b><%= comment.humanized_rating %></b>
+				<% end %>
+				<span class="align"><small><%= comment.user.email %></small><span>
 			</blockquote>
 		<% end %>
 		<% else %>
@@ -41,11 +42,12 @@
 				<p class="about"><%= place.description %></p>
 				<% if place.comments.present? %>
 						<blockquote>
-							<% if place.comments.last.humanized_rating.present? %>
-								<b><%= place.comments.last.humanized_rating %></b> –
-							<% end %>
 							<%= place.comments.last.message %>
-							<small><%= place.comments.last.user.email %></small>
+							<br />
+							<% if place.comments.last.humanized_rating.present? %>
+								<b><%= place.comments.last.humanized_rating %></b>
+							<% end %>
+							<span class="align"><small><%= place.comments.last.user.email %></small></span>
 						</blockquote>
 				<% end %>
 			</div>

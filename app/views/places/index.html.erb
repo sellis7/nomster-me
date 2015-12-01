@@ -48,11 +48,11 @@
 		<% if place.comments.present? %>
 			<div class="col-xs-12">
 				<blockquote>
+          <%= place.comments.last.message %>
 					<% if place.comments.last.humanized_rating.present? %>
-					<b><%= place.comments.last.humanized_rating %></b> -
+					     <b><%= place.comments.last.humanized_rating %></b>
 					<% end %>
-					<%= place.comments.last.message %>
-					<small><%= place.comments.last.user.email %></small>
+					<span class="align"><small><%= place.comments.last.user.email %></small></span>
 				</blockquote>
 			</div>
 		<% end %>

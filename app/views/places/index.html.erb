@@ -50,7 +50,8 @@
 				<blockquote>
           <%= place.comments.last.message %>
 					<% if place.comments.last.humanized_rating.present? %>
-					     <b><%= place.comments.last.humanized_rating %></b>
+            <br />
+					  <b><%= place.comments.last.humanized_rating %></b>
 					<% end %>
 					<span class="align"><small><%= place.comments.last.user.email %></small></span>
 				</blockquote>

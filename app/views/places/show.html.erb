@@ -122,16 +122,16 @@
 </div>
 
 <div class="col-xs-10 col-xs-offset-1">
-		<h1 class="purple_heading">Pics</h1>
-<% if @place.pics.present? %>
-	<div >
-		<% @place.pics.each do |pic| %>
-				<%= image_tag pic.picture.medium, :class => 'img-responsive' %>
-				<br />
-				<%= pic.caption %>
-		<% end %>
-	</div>
-<% else %>
-	<h4 class="col-xs-offset-1">No pictures posted for this location</h4>
-<% end %>
+	<h1 class="purple_heading">Pics</h1>
+	<% if @place.pics.present? %>
+		<div >
+			<% @place.pics.each do |pic| %>
+					<%= image_tag pic.picture.medium, :class => 'img-responsive' %>
+					<br />
+					<%= pic.caption %>
+			<% end %>
+		</div>
+	<% else %>
+		<h4 class="col-xs-offset-1">No pictures posted for this location</h4>
+	<% end %>
 </div>

@@ -8,7 +8,9 @@ class CommentTest < ActiveSupport::TestCase
   test "comment has humanized rating?" do
     user = FactoryGirl.create(:user)
     place = FactoryGirl.create(:place, :user => user)
-    comment = FactoryGirl.attributes_for(:comment, :user => user, :place => place)
+    comment = FactoryGirl.create(:comment, :user => user, :place => place)
+    # For pulling out specific values from :comment as a hash (such as :rating)
+    rating_src = FactoryGirl.attributes_for(:comment, :user => user, :place => place)
 
     RATINGS = {
   		'One Star' => '1_star',
@@ -17,13 +19,12 @@ class CommentTest < ActiveSupport::TestCase
   	}
 
     RATINGS.each do |key, value|
-      if comment[:rating] == value
-        actual = key #Three Stars
+      if rating_src[:rating] == value
+        return actual = key #Three Stars
       end
     end
-    expect = comment[:rating].rating.humanized_rating
+    expect = comment.humanized_rating
     assert_equal expect, actual
-
   end
 
 end

@@ -24,4 +24,4 @@ Technologies used and explored:
 * Kaminari gem for pagination
 * Devise gem for user authentication
 
-Check it out accessible via Heroku [here](https://sellis-nomster.herokuapp.com). Feel free to contribute your knowledge of great localities where there are unique and fun things to do and see! **You will not be emailed, as that feature was disabled within the app to avoid general spamming.** Additionally, an actual, valid email address is not required.
+Check it out, accessible via Heroku [here](https://sellis-nomster.herokuapp.com). Feel free to contribute your knowledge of great localities where there are unique and fun things to do and see! **You will not be emailed, as that feature was disabled within the app to avoid general spamming.** Additionally, an actual, valid email address is not required.

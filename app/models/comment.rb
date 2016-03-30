@@ -18,6 +18,7 @@ class Comment < ActiveRecord::Base
 	def send_comment_email
 		NotificationMailer.comment_added(self).deliver
 	end
-	## For dry-run test: in rails console > Comment.last.send_comment_email
+	# To test (all dev configuration commented out to not actually mail):
+	# In rails console > Comment.last.send_comment_email
 
 end

@@ -6,8 +6,8 @@
 
 body {
   background: url('/assets/concrete_seamless.png');
-/* Trebuchet-based sans serif stack */
-font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  /* Trebuchet-based sans serif stack */
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
 }
 
 .clear {
@@ -69,14 +69,15 @@ font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstre
 }
 
 /* Picture Carousel */
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+#carousel-example-generic {
   margin: 0 auto;
-  height: 480px;
-  width: 90%;
+  max-width: 90%;
+  max-height: 490px;
 }
 
-.carousel-control {
-  margin: 0 5%;
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  height: 490px;
+  width: 100%;
 }
 
 .carousel-caption {
@@ -87,8 +88,10 @@ font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstre
   letter-spacing: 2px;
   text-shadow: rgba(16, 3, 32, 0.95) 2px 2px;
   background-color: rgba(0,0,0,0.5);
-  width: 90%;
-  left: 5%;
+  width: 97%;
+  position: absolute;
+  left: 1.5%;
+  // left: 5%;
 }
 
 /* Kaminari pagination */

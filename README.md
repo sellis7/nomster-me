@@ -19,8 +19,8 @@ Technologies used and explored:
 * Geocoder gem for geocoding & map integrations
 * Image uploading functionality by way of:
   * CarrierWave gem
-	* MiniMagick gem
-	* AWS Amazon S3 & Fog gem
+  * MiniMagick gem
+  * AWS Amazon S3 & Fog gem
 * Kaminari gem for pagination
 * Devise gem for user authentication
 

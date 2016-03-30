@@ -17,7 +17,7 @@ Technologies used and explored:
 * RESTful routing sans scaffolding
 * ActionMailer and Mailgun addon
 * Geocoder gem for geocoding & map integrations
-* Image uploading functionality by way of:
+* Image upload functionality by way of:
   * CarrierWave gem
   * MiniMagick gem
   * AWS Amazon S3 & Fog gem

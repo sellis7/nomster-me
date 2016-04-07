@@ -7,7 +7,7 @@ Hence – where it's @
 
 Tutorial-based build, but self-directed tasks of establishing the pagination, data validations and image upload functionality. Most of the application styling, and some structure, was customized independently.
 
-### Technologies used and explored:   
+##### Technologies used and explored:  
 * Ruby and Rails
 * PostgreSQL
 * Bootstrap

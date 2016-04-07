@@ -5,7 +5,7 @@ A Yelp-type clone with Google Maps functionality and user features like comments
 Though initially intended to promote food services, I opted for a means to locate and report "hot spots" in towns and cities where multiple, diverse shopping opportunities, restaurants, museums, theaters, and such can be sought out by travelers to the area. Also quite useful for new transplants to an area who could be looking for stuff to do, or just investigating their new surroundings.
 Hence – where it's @
 
-Tutorial-based build, but self-directed tasks of establishing the pagination, data validations and image upload functionality. Most of the application styling, and some structure, was customized independently.
+Tutorial-based build with self-directed establishment of pagination, data validations and image upload functionality. Most of the application styling, and some structure, was personally customized, as well.
 
 ##### Technologies used and explored:  
 * Ruby and Rails
